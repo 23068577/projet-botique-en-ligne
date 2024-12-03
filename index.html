@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produits Disponibles</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Lien vers un fichier CSS pour le style -->
+</head>
+<body>
+    <header>
+        <h1>Bienvenue dans notre Boutique</h1>
+        <nav>
+            <a href="panier.html">Panier</a>
+            <a href="commandes.html">Mes Commandes</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Produits Disponibles</h2>
+        <div class="produits">
+            <!-- Exemple de produit -->
+            <div class="produit">
+                <img src="images/produit1.jpg" alt="Produit 1">
+                <h3>Produit 1</h3>
+                <p>Prix: 19.99 €</p>
+                <p>Stock: 15</p>
+                <button onclick="ajouterAuPanier(1)">Ajouter au Panier</button>
+            </div>
+
+            <div class="produit">
+                <img src="images/produit2.jpg" alt="Produit 2">
+                <h3>Produit 2</h3>
+                <p>Prix: 29.99 €</p>
+                <p>Stock: 10</p>
+                <button onclick="ajouterAuPanier(2)">Ajouter au Panier</button>
+            </div>
+
+            <!-- Plus de produits ici -->
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Boutique en ligne</p>
+    </footer>
+
+    <script>
+        // Fonction pour ajouter un produit au panier
+        function ajouterAuPanier(produitId) {
+            // Logique pour ajouter un produit au panier (localStorage ou base de données)
+            alert("Produit " + produitId + " ajouté au panier !");
+        }
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Panier</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Mon Panier</h1>
+        <nav>
+            <a href="index.html">Retour aux Produits</a>
+            <a href="commandes.html">Mes Commandes</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Articles dans votre Panier</h2>
+        <div class="panier">
+            <!-- Exemple d'article dans le panier -->
+            <div class="article-panier">
+                <h3>Produit 1</h3>
+                <p>Quantité: 2</p>
+                <p>Prix Unitaire: 19.99 €</p>
+                <p>Total: 39.98 €</p>
+                <button>Supprimer</button>
+            </div>
+
+            <div class="article-panier">
+                <h3>Produit 2</h3>
+                <p>Quantité: 1</p>
+                <p>Prix Unitaire: 29.99 €</p>
+                <p>Total: 29.99 €</p>
+                <button>Supprimer</button>
+            </div>
+
+            <!-- Ajouter plus d'articles ici -->
+        </div>
+
+        <h3>Total: 69.97 €</h3>
+        <button>Valider la Commande</button>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Boutique en ligne</p>
+    </footer>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes Commandes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Mes Commandes</h1>
+        <nav>
+            <a href="index.html">Retour aux Produits</a>
+            <a href="panier.html">Mon Panier</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Historique des Commandes</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Numéro de Commande</th>
+                    <th>Date</th>
+                    <th>Total</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>#12345</td>
+                    <td>2024-12-01</td>
+                    <td>69.97 €</td>
+                    <td>En cours</td>
+                </tr>
+                <tr>
+                    <td>#12344</td>
+                    <td>2024-11-25</td>
+                    <td>45.00 €</td>
+                    <td>Livrée</td>
+                </tr>
+
+                <!-- Ajouter plus de commandes ici -->
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Boutique en ligne</p>
+    </footer>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion des Produits</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Gestion des Produits</h1>
+        <nav>
+            <a href="index.html">Retour aux Produits</a>
+            <a href="commandes-admin.html">Commandes</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Liste des Produits</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Prix</th>
+                    <th>Stock</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Produit 1</td>
+                    <td>19.99 €</td>
+                    <td>15</td>
+                    <td>
+                        <button>Modifier</button>
+                        <button>Supprimer</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Produit 2</td>
+                    <td>29.99 €</td>
+                    <td>10</td>
+                    <td>
+                        <button>Modifier</button>
+                        <button>Supprimer</button>
+                    </td>
+                </tr>
+
+                <!-- Ajouter plus de produits ici -->
+            </tbody>
+        </table>
+
+        <h3>Ajouter un Nouveau Produit</h3>
+        <form action="ajouter-produit.html" method="post">
+            <label for="nom">Nom du produit:</label>
+            <input type="text" id="nom" name="nom" required>
+            <label for="prix">Prix:</label>
+            <input type="number" id="prix" name="prix" step="0.01" required>
+            <label for="stock">Stock:</label>
+            <input type="number" id="stock" name="stock" required>
+            <button type="submit">Ajouter</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Boutique en ligne</p>
+    </footer>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ma Boutique en Ligne</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo Boutique">
+            <h1>Ma Boutique en Ligne</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="panier.html">Mon Panier</a></li>
+                <li><a href="commandes.html">Mes Commandes</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Nos Produits</h2>
+        <div id="product-list" class="produits">
+            <!-- Les produits seront affichés ici par JavaScript -->
+        </div>
+
+        <h2>Mon Panier</h2>
+        <div id="cart-items">
+            <!-- Les items du panier seront affichés ici par JavaScript -->
+        </div>
+        <div id="cart-total"></div>
+
+        <button onclick="checkout()">Passer Commande</button>
+        <button onclick="clearCart()">Vider le Panier</button>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Ma Boutique en Ligne. Tous droits réservés.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+<img src="images/produit1.jpg" alt="Produit 1">
